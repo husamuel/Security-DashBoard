@@ -12,7 +12,10 @@ Prazo final: **29 Setembro**
 - É necessário que se organizem internamente para dividir e coordenar as tarefas entre os membros da equipa.
 - Em caso de dúvidas ou dificuldades, contactem-me sem hesitar.
 
-## Equipa 1 – DevOps
+---
+
+## Equipa 1 – Infraestrutura e DevOps
+**Membros:** husamuel, edfreder  
 **Pasta de trabalho:** `devops/`  
 **Conteúdo final esperado:** Dockerfile + docker-compose.yml + README.md  
 **Instalar:** Docker  
@@ -27,7 +30,8 @@ Prazo final: **29 Setembro**
 
 ---
 
-## Equipa 2 – Backend
+## Equipa 2 – Backend e Integração de Dados
+**Membros:** mreinald, tfilipe  
 **Pasta de trabalho:** `backend/`  
 **Conteúdo final esperado:** API com duas rotas + README.md  
 **Instalar:** Python 3.9+, pip  
@@ -43,7 +47,8 @@ Prazo final: **29 Setembro**
 
 ---
 
-## Equipa 3 – Frontend
+## Equipa 3 – Frontend e Experiência do Utilizador
+**Membros:** ddo-carm, aaugusto  
 **Pasta de trabalho:** `frontend/`  
 **Conteúdo final esperado:** Projeto React/Tailwind + componente de HealthCheck + README.md  
 **Instalar:** Node.js LTS + npm  
@@ -59,7 +64,8 @@ Prazo final: **29 Setembro**
 
 ---
 
-## Equipa 4 – Segurança
+## Equipa 4 – Segurança e Monitoramento
+**Membros:** joao-rib, adcampos, mmirella  
 **Pasta de trabalho:** `security/`  
 **Conteúdo final esperado:** Relatório JSON + resumo em Markdown + README.md  
 **Instalar:** Trivy + Docker  
