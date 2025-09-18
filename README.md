@@ -65,7 +65,7 @@ Prazo final: **29 Setembro**
 ---
 
 ## Equipa 4 – Segurança e Monitoramento
-**Membros:** joao-rib, adcampos, mmirella  
+**Membros:** joao-rib, adcampos 
 **Pasta de trabalho:** `security/`  
 **Conteúdo final esperado:** Relatório JSON + resumo em Markdown + README.md  
 **Instalar:** Trivy + Docker  
