@@ -4,6 +4,8 @@
 
 - Imagem de referência para Frontend
 
+- [Backlog](https://github.com/husamuel/Security-DashBoard/blob/main/Backlog.md)
+
 #  Semana 2 – Desenvolvimento do MVP Integrado
 
 Começa: **29 Setembro**    
