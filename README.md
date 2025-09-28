@@ -9,7 +9,7 @@
 #  Semana 2 – Desenvolvimento do MVP Integrado
 
 Começa: **29 Setembro**    
-Prazo final: **6 Outubro**
+Prazo final: **12 Outubro**
 
 - Cada equipa tem liberdade para escolher as ferramentas que preferir, desde que cumpram as tarefas propostas.
 - Se quiserem ir além do que está listado, estão à vontade; posso disponibilizar as tarefas das próximas semanas caso queiram avançar mais rápido.
