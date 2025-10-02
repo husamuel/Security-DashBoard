@@ -9,13 +9,42 @@ trivy config ./my-terraform-code
 // TODO = Por fazer, ou revisitar
 // REDO = Reavaliar ou refazer o segmento
 
+#include "../include/security.h"
 #include <stdio.h>
 #include <stdlib.h>
 
+void	parse_json(t_results *result, const char *file)
+{
+	char	*line;
+	int		fd;
+
+	fd = open(file, O_RDONLY);
+	if (fd == -1)
+		error_map("Cannot open .json file", g); // TODO escrever error_exit e afins
+	while (1)
+	{
+    char	*buff;
+
+		line = get_next_line(fd); // TODO trazer o get_next_line
+		if (!line)
+			break ;
+		buff = trim_whitespace(line); // TODO escrever funcao
+		if (!ft_isemptystr(buff))
+			parse_line(&result, line); // TODO escrever funcao
+		free(line);
+		free(buff);
+	}
+	close(fd);
+}
+
 int main()
 {
+
+	t_results result;
+
 	// Define the image to scan // REDO
 	const char *image = "nginx:latest";
+  const char *json_file = "security/report.json";
 
 	// TODO Possivelmente verificar se Trivy esta instalado antes de correr este comando?
 
@@ -31,8 +60,10 @@ int main()
 			return 1;
 	}
 
+	parse_json(&result, json_file);
+
 	// Open the results file // REDO
-	FILE *fp = fopen("security/report.json", "r");
+	FILE *fp = fopen(json_file, "r");
 	if (!fp)
 	{
 		perror("Failed to open results file");
