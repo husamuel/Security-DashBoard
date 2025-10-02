@@ -5,56 +5,64 @@ trivy image nginx:latest
 trivy config ./my-terraform-code
 */
 
-/*Exemplo muito duvidoso
+//Exemplo muito duvidoso
+// TODO = Por fazer, ou revisitar
+// REDO = Reavaliar ou refazer o segmento
 
 #include <stdio.h>
 #include <stdlib.h>
 
-int main() {
-    // Define the image to scan
-    const char *image = "nginx:latest";
+int main()
+{
+	// Define the image to scan // REDO
+	const char *image = "nginx:latest";
 
-    // # TODO Possivelmente verificar se Trivy esta instalado antes de correr este comando?
+	// TODO Possivelmente verificar se Trivy esta instalado antes de correr este comando?
 
-    // Construct the command string
-    char command[256];
-    snprintf(command, sizeof(command), "./src/scan.sh %s", image);
+	// Construct the command string // REDO
+	char command[256];
+	snprintf(command, sizeof(command), "./src/scan.sh %s", image);
 
-    // Run the scan
-    int ret = system(command);
-    if (ret != 0) {
-        fprintf(stderr, "Error: Trivy scan failed.\n");
-        return 1;
-    }
+	// Run the scan // REDO
+	int ret = system(command);
+	if (ret != 0)
+	{
+		fprintf(stderr, "Error: Trivy scan failed.\n");
+			return 1;
+	}
 
-    // Open the results file
-    FILE *fp = fopen("security/report.json", "r");
-    if (!fp) {
-        perror("Failed to open results file");
-        return 1;
-    }
+	// Open the results file // REDO
+	FILE *fp = fopen("security/report.json", "r");
+	if (!fp)
+	{
+		perror("Failed to open results file");
+		return 1;
+	}
 
-    // Process or save the results (here we just copy to another file)
-    FILE *out = fopen("./report.md", "w");
-    if (!out) {
-        perror("Failed to open output file");
-        fclose(fp);
-        return 1;
-    }
+	// Open a new file // REDO
+	FILE *out = fopen("./report.md", "w");
+	if (!out)
+	{
+		perror("Failed to open output file");
+		fclose(fp);
+		return 1;
+	}
 
-    char buffer[1024];
-    size_t n;
-    while ((n = fread(buffer, 1, sizeof(buffer), fp)) > 0) {
-        fwrite(buffer, 1, n, out);
-    }
+	// Process or save the results (here we just copy to the second file) // REDO
+	char buffer[1024];
+	size_t n;
+	while ((n = fread(buffer, 1, sizeof(buffer), fp)) > 0)
+	{
+		fwrite(buffer, 1, n, out);
+	}
 
-    fclose(fp);
-    fclose(out);
+	fclose(fp);
+	fclose(out);
 
-    printf("Scan complete. Results saved to ./report.md\n");
-    return 0;
+	printf("Scan complete. Results saved to ./report.md\n");
+	return 0;
 }
-*/
+
 
 /*Expected "security/report.json" file:
 
