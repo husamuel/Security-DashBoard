@@ -1,0 +1,12 @@
+services:
+  backend:
+    build: ./backend_container
+    ports:
+      - "5001:5000" # Dentro do container: 5000 # No host: 5001
+  frontend:
+    build: ./frontend_container
+    ports:
+      - "3000:3000"
+  
+  security:
+    
